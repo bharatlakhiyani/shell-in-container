@@ -10,7 +10,7 @@ RUN info(){ printf '\n--\n%s\n--\n\n' "$*"; } \
     linux-headers make musl-dev \
     python openssl-dev zlib-dev \
  && info '==> Installing NPM modules...' \
- && RUN npm config set unsafe-perm true \
+ && npm config set unsafe-perm true \
  && npm install -g npm \
  && npm update -g npm \
  && npm install --production \
