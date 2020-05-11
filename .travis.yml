@@ -1,0 +1,21 @@
+language: node_js
+
+sudo: required
+
+services:
+- docker
+
+before_script:
+- echio "Before Executed"
+
+install:
+- echo "Install"
+
+script: true
+#  - go test ./cmd/bluepay-report-server/
+
+after_success:
+- ./travisDockerBuild.sh
+
+notifications:
+  slack: ibm-cio:Ll6gcxWaILLndlIMbaRpfclx
