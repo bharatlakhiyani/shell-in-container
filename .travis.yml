@@ -7,6 +7,7 @@ services:
 
 before_script:
 - echio "Before Executed"
+- chmod 755 ./travisDockerBuild.sh
 
 install:
 - echo "Install"
