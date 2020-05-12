@@ -21,6 +21,8 @@ RUN info(){ printf '\n--\n%s\n--\n\n' "$*"; } \
  && rm -rf ~/.node-gyp /tmp/* \
  && info '==> Deps installed! =)'
 
+RUN chmod 755 /app/entrypoint.sh
+
 COPY . /app
 
 # Rename node_modules_new back to node_modules.
